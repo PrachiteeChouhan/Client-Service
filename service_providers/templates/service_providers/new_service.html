@@ -1,0 +1,6 @@
+<p> Add a service name and details:</p>
+<form action="{% url 'service_providers:new_service' %}" method='POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Submit</button>
+</form>
