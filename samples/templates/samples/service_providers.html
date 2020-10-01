@@ -1,0 +1,14 @@
+<p>Service Providers(for clients):</p>
+<ul>
+    {% for single in services %}
+      <li>
+          <p>{{single.service_name}}</p>
+          <p>{{single.text}}</p>
+          <a href="{% url 'samples:send_email' %}">Contact</a>
+      </li>
+    {% empty %}
+      <li>
+          There are no service providers
+      </li>
+    {% endfor %}
+</ul>

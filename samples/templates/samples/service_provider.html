@@ -1,0 +1,17 @@
+<a href="{% url 'samples:index' %}">Home Page </a>
+
+<p>Service Providers</p>
+<ul>
+    {% for single in service %}
+      <li>
+          <p>{{single.service_name}}</p>
+          <p>{{single.text}}</p>
+      </li>
+    {% empty %}
+      <li>
+          There are no service providers
+      </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'service_providers:new_service' %}">Add a new service:</a>
